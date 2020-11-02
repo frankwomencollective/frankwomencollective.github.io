@@ -308,9 +308,9 @@
             var cleanSession = new Boolean(true);
             var useSSL = new Boolean(true);
             var endpoint = 'test.mosquitto.org:8081';
-            var username = '';
-            var password = '';
-            var clientid = '';
+            var username = "";
+            var password = "";
+            var clientid = "";
 
             uri = endpoint.split(/:/g);
             console.log("connecting to " + uri[0] + ":" + parseInt(uri[1]) + " using a " + (cleanSession ? "clean" : "persistant") + " session " + (username ? "with" : "without") + " authentication as " + clientid);

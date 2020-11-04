@@ -91,7 +91,7 @@
                     <span class="badge badge-pill" id="feedback-publish"><i class="fas fa-comment-dots"></i></span>
                 </h4>
                 <div id="panel-publish">
-                        <button class="btn btn-secondary btn-md btn-block" type="submit" onclick="PublishMessage('Message', 'testTD/myTopic')">Publish</button>
+                        <button class="btn btn-secondary btn-md btn-block" onclick="PublishMessage('Message', 'testTD/myTopic')">Publish</button>
                 </div>
 
                 <hr class="mb-4" />
@@ -317,6 +317,7 @@
 		
 		// Publish button press
         function PublishMessage(newMessage, newTopic) {
+			console.log(newMessage);
             message = new Paho.MQTT.Message(newMessage);
 			message.destinationName = newTopic;
             message.qos = parseInt($('#publish-qos').val());

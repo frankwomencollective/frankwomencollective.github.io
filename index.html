@@ -320,8 +320,8 @@
 			console.log(newMessage);
             message = new Paho.MQTT.Message(newMessage);
 			message.destinationName = newTopic;
-            message.qos = parseInt($('#publish-qos').val());
-            message.retained = $('#publish-retain').is(':checked');
+            message.qos = 0;
+            message.retained = true;
             mqtt.send(message);
         }
 

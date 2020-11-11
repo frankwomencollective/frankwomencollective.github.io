@@ -19,9 +19,30 @@
  			 background-color: #cccccc;
 			}
 		
-       .container {
+		body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+				.row-container {display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;}
+				.first-row {background-color: lime; }
+				.second-row { flex-grow: 1; border: none; margin: 0; padding: 0; }
+		
+      	
+		.video_wrapper {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+			}
+			iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		
+		.container {
             max-width: 992px;
         }
+		
+		
 
         .border-top { border-top: 1px solid #e5e5e5; }
         .border-bottom { border-bottom: 1px solid #e5e5e5; }
@@ -63,7 +84,7 @@
         .form-control:-ms-input-placeholder {
             color: #999;
         }
-			
+				
 				
     </style>
 </head>
@@ -85,28 +106,36 @@
                     src="https://raw.githubusercontent.com/mqtt/mqttorg-graphics/6e24cee95735f7bf04c1a11f7ebf246801f586a2/mqtticon.svg"
                     alt="" width="72" height="72">-->
             </div>
-            <div class="col-md-2 text-center col-xl-11">
+          <div class="col-md-2 text-center col-xl-11">
                 <h1>Frank Show</h1>
                 <p class="lead">live from online.</p>
             </div>   
         </div>
-		<div class="text-uppercase text-lg-center"> 
-		<a href="Pages/Room1.html" target="_self">Room 1</a>
-		<a href="Pages/Room2.html" target="_self">Room 2</a>
-		<a href="Pages/Room3.html" target="_self">Room 3</a>
-		<a href="Pages/Room4.html" target="_self">Room 4</a>
-		</div>
-		<iframe src="https://obs.ninja/?view=mikeybrubru" style="height:540;width:960px;" title="Living Room"></iframe>
+		
 
+	  <div class="text-uppercase text-lg-center"> 
+			<a href="Pages/Room1.html" target="_self">Room 1</a>
+			<a href="Pages/Room2.html" target="_self">Room 2</a>
+			<a href="Pages/Room3.html" target="_self">Room 3</a>
+			<a href="Pages/Room4.html" target="_self">Room 4</a>
+		</div>
+		
+		<div class="video_wrapper">
+
+		<iframe src="https://obs.ninja/?view=mikeybrubru" class="second-row"  title="Living Room"></iframe>
+
+		</div>
+		
         <div id="alert" class="d-none alert alert-danger alert-dismissible fade show" role="alert">
 
             <strong>Holy guacamole!</strong> You should check in on some of those fields below.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+          </button>
+      </div>
         <div class="row">
-            <div class="col-md-8 order-md-1 col-xl-12">
+			
+          <div class="col-md-8 order-md-1 col-xl-12">
                 <h4 id="header-publish" class="d-flex justify-content-between align-items-center mb-2">
                     <span class="">Message Buttons</i></span>
                     <span class="badge badge-pill" id="feedback-publish"><i class="fas fa-comment-dots"></i></span>

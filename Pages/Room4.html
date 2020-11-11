@@ -20,6 +20,24 @@
  			 background-color: #cccccc;
 			}
 		
+		body, html {width: 100%; height: 100%; margin: 0; padding: 0}
+				.row-container {display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;}
+				.first-row {background-color: lime; }
+				.second-row { flex-grow: 1; border: none; margin: 0; padding: 0; }
+		
+      	
+		.video_wrapper {
+			position: relative;
+			padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+			}
+			iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
         .container {
             max-width: 992px;
         }
@@ -91,7 +109,10 @@
 		<a href="Room3.html" target="_self">Room 3</a>
 		<a href="Room4.html" target="_self">Room 4</a>
 		</div>
-		<iframe src="https://obs.ninja/?view=mikeybrubru" style="height:540;width:960px;" title="Iframe Example"></iframe>
+		
+		<div class="video_wrapper">
+		<iframe src="https://obs.ninja/?view=mikeybrubru" class="second-row"  title="Living Room"></iframe>
+		</div>
 
         <div id="alert" class="d-none alert alert-danger alert-dismissible fade show" role="alert">
 

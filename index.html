@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>MQTT Websocket Example</title>
+    <title>Frank Show</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -68,21 +68,22 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row py-5">
-            <div class="col-md-2"></div>
-            <div class="col-md-2 d-flex justify-content-end">
-                <img class="d-inline mx-auto mb-4"
+            <div class="col-md-2 d-flex justify-content-end col-xl-1">
+              <!--  <img class="d-inline mx-auto mb-4"
                     src="https://raw.githubusercontent.com/mqtt/mqttorg-graphics/6e24cee95735f7bf04c1a11f7ebf246801f586a2/mqtticon.svg"
-                    alt="" width="72" height="72">
+                    alt="" width="72" height="72">-->
             </div>
-            <div class="col-md-6 text-center">
-                <h2>MQTT over Websockets</h2>
-                <p class="lead">Connect to an MQTT server using Websockets.</p>
-            </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-2 text-center col-xl-11">
+                <h1>Frank Show</h1>
+                <p class="lead">live from online.</p>
+            </div>   
         </div>
-		<p>
-		<a href="Pages/Room1.html" target="_self">Link to Room 1</a>
-		</p>
+		<div class="text-uppercase text-lg-center"> 
+		<a href="Pages/Room1.html" target="_self">Room 1</a>
+		<a href="Pages/Room2.html" target="_self">Room 2</a>
+		<a href="Pages/Room3.html" target="_self">Room 3</a>
+		<a href="Pages/Room4.html" target="_self">Room 4</a>
+		</div>
 		<iframe src="https://obs.ninja/?view=mikeybrubru" style="height:540;width:960px;" title="Iframe Example"></iframe>
 
         <div id="alert" class="d-none alert alert-danger alert-dismissible fade show" role="alert">
@@ -93,7 +94,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-md-8 order-md-1">
+            <div class="col-md-8 order-md-1 col-xl-12">
                 <h4 id="header-publish" class="d-flex justify-content-between align-items-center mb-2">
                     <span class="">Message Buttons</i></span>
                     <span class="badge badge-pill" id="feedback-publish"><i class="fas fa-comment-dots"></i></span>
@@ -115,51 +116,6 @@
 							   onchange="PublishMessage(this.value, 'testTD/myTopic')">
 					
                 </div>
-
-                <hr class="mb-4" />
-
-                <h4 id="header-subscribe" class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="">Subscribe</span>
-                    <span class="badge badge-pill" id="feedback-subscribe"><i class="fas fa-comment"></i></span>
-                </h4>
-                <div id="panel-subscribe">
-                    <form id="sub" class="needs-validation" novalidate="">
-                        <div class="row">
-                            <div class="col-md-8 mb-2">
-                                <label for="subscribe-topic">Topic</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">/</span>
-                                    </div>
-                                    <input type="text" class="form-control" id="subscribe-topic" placeholder="testTD/myTopic" required="">
-                                    <div id="subscribe-error" class="invalid-feedback" style="width: 100%;">An error has occured. Sorry, that's all I got. :(</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="subscribe-qos">Quality of Service<span class="text-muted">&nbsp;(QOS)</span></label>
-                                <select class="custom-select d-block w-100" id="subscribe-qos">
-                                    <option value="0">0 - At most once</option>
-                                    <option value="1">1 - At least once</option>
-                                    <option value="2">2 - Exactly once</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button class="btn btn-secondary btn-md btn-block" type="submit" id="subscribe" disabled>Subscribe</button>
-                    </form>
-                </div>
-
-                <hr class="mb-4" />
-
-                <div class="mb-2">
-                    <h4 class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="">Subscriptions</span>
-                        <span class="badge badge-pill" id="feedback-subscriptions"><i class="fas fa-comments"></i></span>
-                    </h4>
-                    <ul class="list-group mb-3s" id="subscriptions">
-                    </ul>
-                </div>
-                <button class="btn btn-info btn-md btn-block" type="submit" id="clear">Clear Messages</button>
-
             </div>
         </div>
 

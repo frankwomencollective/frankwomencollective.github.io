@@ -168,18 +168,18 @@
 					<td>
                         <button class="btn btn-secondary btn-md btn-block" 
 								style="background-color:green;color:black;" 
-								onclick="PublishMessage('Hey', 'frank/LivingRoom')">YES						
+								onclick="PublishMessage('Yes', 'frank/LivingRoom')">YES						
 						</button>
 					</td>
 					<td>
 					    <button class="btn btn-secondary btn-md btn-block" 
 								style="background-color:yellow;color:black;" 
-								onclick="PublishMessage('Bye', 'frank/LivingRoom')">MEH</button>
+								onclick="PublishMessage('Meh', 'frank/LivingRoom')">MEH</button>
 					</td>
 					<td>
 					    <button class="btn btn-secondary btn-md btn-block" 
 								style="background-color:red;color:black;" 
-								onclick="PublishMessage('Bye', 'frank/LivingRoom')">NO</button>
+								onclick="PublishMessage('No', 'frank/LivingRoom')">NO</button>
 					</td>
 						<!--
 						<input type="range" min="1" max="100" value="50" class="slider" id="myRange" 
@@ -349,7 +349,7 @@
 			console.log("connect");
             var cleanSession = true;
             var useSSL = true;
-            var endpoint = 'test.mosquitto.org:8081';
+            var endpoint = 'mqtt.frankuserinterface.live:8033';
             var username = "";
             var password = "";
             var clientid = "";

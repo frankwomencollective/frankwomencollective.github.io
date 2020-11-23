@@ -39,17 +39,10 @@
 		
 		
 		
-			.audience_wrapper {
+		.audience_wrapper {
 			position: relative;
-			padding-bottom: 16.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+			padding-bottom: 15.00%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
 			}
-			iframe{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
 		
 		
 		.container {
@@ -157,9 +150,17 @@
 		</td>
 		</table>
 		
-		<br/><br/><br/><br/><br/><br/><br/>
+		<br/><br/><br/>
 		
-		<div class="video_wrapper" style="padding-top:0px">
+		<div  class="audience_wrapper" style="padding-top:0px">
+ 		 <iframe 
+   	 		src="https://obs.ninja/?room=frank_group1&audiodevice=0" allow="camera;microphone">
+ 	 	</iframe>
+		</div>
+		
+		<br/>
+		
+	  	<div class="video_wrapper" style="padding-top:0px">
 
 			<iframe src="https://obs.ninja/?view=frank_room1&bitrate=20000&codec=vp9&stereo&label=frank_room1" class="second-row"  title="Living Room"></iframe>
 
@@ -168,13 +169,7 @@
 		<!-- BUTTONS  -->
 		<div class="row">
 			
-          <div class="col-xl-12">
-                <h4 id="header-publish" class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="">Jiggle Buttons</i></span>
-                    <span class="badge badge-pill" id="feedback-publish"><i class="fas fa-comment-dots"></i></span>
-                </h4>
-			
-			
+          <div class="col-xl-12">				
 				 <table class="col-xl-12">
 					 <td align="left" valign="middle">
                         <button class="btn" 						
@@ -218,14 +213,7 @@
             </div>
         </div>
 
-		<div  class="audience_wrapper" >
- 		 <iframe 
-   	 		src="https://obs.ninja/?room=frank_group1&audiodevice=0" allow="camera;microphone">
- 	 	</iframe>
-		</div>
-	
-	
-        <footer class="my-5 pt-5 text-muted text-center text-small">
+      <footer class="my-5 pt-5 text-muted text-center text-small">
         </footer>
 
 

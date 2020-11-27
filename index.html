@@ -39,7 +39,7 @@
 		
 		
 		.container {
-            max-width: 1280px;
+            max-width: 1600px;
         }
 		
 		
@@ -111,77 +111,63 @@
                 <h1>live online.</h1>
           </div>   
         </div>
-		
-		<div class="video_wrapper">
-
-		<iframe src="https://obs.ninja/?view=frank_room1&stereo" allowfullscreen class="second-row"  title="Living Room"></iframe>
-
-		</div>
-		
-        <div id="alert" class="d-none alert alert-danger alert-dismissible fade show" role="alert">
-
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-		
-			  <!-- BUTTONS  -->
-		<div class="row">
+					
+		<div class = "row">
 			
-          <div class="col-xl-12">
+			<div class="col col-11">
+				<div class="video_wrapper">
+					<iframe src="https://obs.ninja/?view=frank_room1&stereo" allowfullscreen class="second-row"  title="Living Room"></iframe>
+				</div>
+			</div>				
+			
+         	<div class="col-1">
                 <h4 id="header-publish" class="d-flex justify-content-between align-items-center mb-2">
                     <span class="">Jiggle Buttons</i></span>
                     <span class="badge badge-pill" id="feedback-publish"><i class="fas fa-comment-dots"></i></span>
                 </h4>
 			
 			
-				 <table class="col-xl-12">
-					 <td align="left" valign="middle">
+				 <table class="col-1">
+					
                         <button class="btn" 						
 								onclick="PublishMessage('Emot/1', 'frank/LivingRoom')">	
 								<img src="/Resources/Icons/JigglePets/pet1.png" alt="Room 1" border="0">
 						</button>
-					</td>
-					 
-					<td  align="left" valign="middle">
+							
+					
                         <button class="btn" 						
 								onclick="PublishMessage('Emot/2', 'frank/LivingRoom')">	
 								<img src="/Resources/Icons/JigglePets/pet2.png"  alt="Room 1" border="0">
 						</button>
-					</td>
+				
 					 
-					 <td  align="middle" valign="middle">
                         <button class="btn" 						
 								onclick="PublishMessage('Emot/3', 'frank/LivingRoom')">	
 								<img src="/Resources/Icons/JigglePets/JigglePet3.gif" alt="Room 1" border="0">
 						</button>
-					</td>
+					
 					 
-					<td  align="right" valign="middle">
+					
                         <button class="btn" 						
 								onclick="PublishMessage('Emot/4', 'frank/LivingRoom')">	
 								<img src="Resources/Icons/JigglePets/JigglePet4.gif" alt="Room 1" border="0">
-						</button>
-					</td>
+						</button>					 
 					 
-					 
-					<td  align="right" valign="middle">
+				
                         <button class="btn" 						
 								onclick="PublishMessage('Emot/5', 'frank/LivingRoom')">	
 								<img src="/Resources/Icons/JigglePets/pet5.png"  alt="Room 1" border="0">
 						</button>
-					</td>
+				
 					 
 				 </table>
 			
 			
           </div>
-        </div>
-
-      
 		
-<div class="text-center col-xl-12">
+		</div>
+					
+		<div class="text-center col-xl-12">
 		
 		
 	<br></br><br></br><br></br><br></br><br></br>
@@ -222,6 +208,11 @@
         <footer class="my-5 pt-5 text-muted text-center text-small">
         </footer>
     </div>
+
+
+
+
+
 
     <!-- JavaScript
          ==================================================
